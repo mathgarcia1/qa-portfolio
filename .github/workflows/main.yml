@@ -17,4 +17,4 @@ jobs:
         env:
           TEST_ADMIN_USER: admin
           TEST_ADMIN_PASS: password123
-        run: pytest qa-portfolio/tests
+        run: pytest tests/
