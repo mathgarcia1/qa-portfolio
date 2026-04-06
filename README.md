@@ -1,5 +1,7 @@
 # QA Portfolio: Generic Project Manager E2E Suite
 
+![E2E Tests](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml/badge.svg)
+
 Este projeto demonstra uma suíte de testes de ponta a ponta (E2E) para uma plataforma de gestão de projetos. O objetivo é validar fluxos críticos de negócio usando **Playwright**, **Python** e o padrão **Page Object Model (POM)**.
 
 ## 🚀 Fluxos Cobertos
@@ -24,7 +26,7 @@ docker-compose up --build
 ### Localmente
 1. Instale as dependências: `pip install -r requirements.txt`
 2. Instale o Playwright: `playwright install chromium`
-3. Execute os testes: `pytest qa-portfolio/tests`
+3. Execute os testes: `pytest tests/`
 
 ---
 *Este é um projeto de demonstração técnica focado em qualidade de software.*
