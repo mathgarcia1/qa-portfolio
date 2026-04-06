@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Novo BI Report</h2>
+<form action="/admin/bi-reports" method="post">
+    <input name="title" placeholder="Title">
+    <textarea name="embed_url" placeholder="Embed URL"></textarea>
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}

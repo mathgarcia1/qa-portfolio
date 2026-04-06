@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - TEST_ADMIN_USER=admin
+      - TEST_ADMIN_PASS=password123

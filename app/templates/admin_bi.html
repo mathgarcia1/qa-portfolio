@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>BI Reports</h2>
+<a href="/admin/bi-reports/novo">Novo BI</a>
+<table class="table">
+    <tbody>
+        {% for report in reports %}
+        <tr><td>{{ report.title }}</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

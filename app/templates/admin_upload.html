@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Upload de Cronograma</h2>
+{% if step == 1 %}
+    <form action="/admin/upload" method="post">
+        <input type="hidden" name="step" value="1">
+        <input type="file" name="file">
+        <button type="submit">Continuar para Mapeamento</button>
+    </form>
+{% elif step == 2 %}
+    <form action="/admin/upload" method="post">
+        <input type="hidden" name="step" value="2">
+        <input name="project_name" placeholder="Project Name">
+        <select name="mapping_area"><option value="123">Area</option></select>
+        <select name="mapping_subarea"><option value="456">Subarea</option></select>
+        <select name="mapping_disciplina"><option value="789">Disciplina</option></select>
+        <button type="submit">Processar XML</button>
+    </form>
+{% else %}
+    <div class="alert-success">Projeto criado com sucesso</div>
+{% endif %}
+{% endblock %}
