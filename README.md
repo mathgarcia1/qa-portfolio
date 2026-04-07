@@ -4,7 +4,7 @@
 
 [![AllureReport](https://img.shields.io/badge/Allure_Report-View_Results-brightgreen?style=flat-square&logo=allure)](https://mathgarcia1.github.io/qa-portfolio/)
 
-[![Hits](https://hits.dwyl.com/mathgarcia1/qa-portfolio.svg?style=flat-square)](https://hits.dwyl.com/mathgarcia1/qa-portfolio)
+[![HitCount](https://hits.dwyl.com/matheusgarcia1/qa-portfolio.svg?style=flat-square)](http://hits.dwyl.com/matheusgarcia1/qa-portfolio)
 
 Este projeto demonstra uma arquitetura de testes híbrida de alta performance para uma plataforma de gestão de projetos. O foco principal é a **observabilidade**, **manutenibilidade** e o conceito de **Shift-Left Testing**.
 
