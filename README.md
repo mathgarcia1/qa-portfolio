@@ -1,4 +1,4 @@
-# 🏗️ QA Portfolio: Platform Project Management (E2E & API Suite)
+# QA Portfolio: Platform Project Management (E2E & API Suite)
 
 [![E2E Tests](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml)
 
@@ -10,29 +10,29 @@ Este projeto demonstra uma arquitetura de testes híbrida de alta performance pa
 
 ---
 
-## 🎯 Objetivos Estratégicos
+## Objetivos Estratégicos
 - **Cobertura Híbrida:** Validação de fluxos críticos via UI (E2E) e regras de negócio via API (Integração).
 - **Estratégia Shift-Left:** Detecção precoce de vulnerabilidades de segurança e falhas lógicas na camada de serviço.
 - **Dados Realistas:** Implementação da biblioteca `Faker` para geração de massa de dados dinâmica e resiliente.
 
-## 🛠️ Stack Tecnológica & Decisões
+## Stack Tecnológica & Decisões
 - **[Playwright](https://playwright.dev/):** Escolhido pela velocidade de execução e auto-waiting nativo, reduzindo *flakiness*.
 - **[Pytest](https://docs.pytest.org/):** Framework robusto para orquestração de testes e uso de fixtures efêmeras.
 - **Page Object Model (POM):** Abstração de seletores e lógica de interação para facilitar a manutenção a longo prazo.
 - **[Allure Report](https://docs.qameta.io/allure/):** Dashboard de alta fidelidade com evidências visuais e histórico de execuções.
 - **FastAPI TestClient:** Validação de endpoints sem a sobrecarga de um navegador, seguindo a Pirâmide de Testes.
 
-## 🚀 Fluxos Cobertos
+## Fluxos Cobertos
 1. **Autenticação Segura:** Validação de cookies JWT e tratamento de credenciais inválidas.
 2. **Gestão Administrativa:** CRUD de usuários e permissões de acesso (com análise de vulnerabilidades).
 3. **Módulo de BI:** Integração de relatórios externos e renderização dinâmica.
 4. **Importação de Cronogramas:** Fluxo de upload de arquivos XML com mapeamento dinâmico de colunas e tratamento de erros de input.
 
-## 📊 Observabilidade (Allure Report)
+## Observabilidade (Allure Report)
 Os resultados dos testes são publicados automaticamente no GitHub Pages após cada commit.
 > [Clique aqui para visualizar o último Relatório de Testes](https://mathgarcia1.github.io/qa-portfolio/)
 
-## 📦 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 - Python 3.10+
