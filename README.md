@@ -1,9 +1,10 @@
 # 🏗️ QA Portfolio: Platform Project Management (E2E & API Suite)
 
-![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmathgarcia1%2Fqa-portfolio&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)
 [![E2E Tests](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml)
 
-[![Allure Report](https://img.badge.svg?label=Report&message=Allure&color=green)](https://mathgarcia1.github.io/qa-portfolio/)
+[![AllureReport](https://img.shields.io/badge/Allure_Report-View_Results-brightgreen?style=flat-square&logo=allure)](https://mathgarcia1.github.io/qa-portfolio/)
+
+[![Hits](https://hits.dwyl.com/mathgarcia1/qa-portfolio.svg?style=flat-square)](https://hits.dwyl.com/mathgarcia1/qa-portfolio)
 
 Este projeto demonstra uma arquitetura de testes híbrida de alta performance para uma plataforma de gestão de projetos. O foco principal é a **observabilidade**, **manutenibilidade** e o conceito de **Shift-Left Testing**.
 
