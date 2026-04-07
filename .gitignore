@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+
+# Allure Reports
+allure-results/
+allure-report/
+allure-history/
+
+# Playwright Artifacts
+test-results/
+playwright-report/
+blob-report/

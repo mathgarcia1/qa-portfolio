@@ -2,7 +2,7 @@
 {% block content %}
 <h2>Upload de Cronograma</h2>
 {% if step == 1 %}
-    <form action="/admin/upload" method="post">
+    <form action="/admin/upload" method="post" enctype="multipart/form-data">
         <input type="hidden" name="step" value="1">
         <input type="file" name="file">
         <button type="submit">Continuar para Mapeamento</button>
@@ -11,9 +11,18 @@
     <form action="/admin/upload" method="post">
         <input type="hidden" name="step" value="2">
         <input name="project_name" placeholder="Project Name">
-        <select name="mapping_area"><option value="123">Area</option></select>
-        <select name="mapping_subarea"><option value="456">Subarea</option></select>
-        <select name="mapping_disciplina"><option value="789">Disciplina</option></select>
+        <select name="mapping_area">
+            <option value="123">Area</option>
+            <option value="10001">10001</option>
+        </select>
+        <select name="mapping_subarea">
+            <option value="456">Subarea</option>
+            <option value="10002">10002</option>
+        </select>
+        <select name="mapping_disciplina">
+            <option value="789">Disciplina</option>
+            <option value="10003">10003</option>
+        </select>
         <button type="submit">Processar XML</button>
     </form>
 {% else %}

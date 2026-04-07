@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/project">
+	<Name>Projeto Teste E2E</Name>
+	<Title>Obra Modelo</Title>
+	<!-- Definição dos Campos Personalizados (Colunas do MS Project) -->
+	<ExtendedAttributes>
+		<ExtendedAttribute>
+			<FieldID>188743731</FieldID>
+			<FieldName>Text1</FieldName>
+			<Alias>Area_Obra</Alias> <!-- Simulando a coluna Área -->
+		</ExtendedAttribute>
+		<ExtendedAttribute>
+			<FieldID>188743732</FieldID>
+			<FieldName>Text2</FieldName>
+			<Alias>Disciplina_Obra</Alias> <!-- Simulando a coluna Disciplina -->
+		</ExtendedAttribute>
+        <ExtendedAttribute>
+			<FieldID>188743733</FieldID>
+			<FieldName>Text3</FieldName>
+			<Alias>Subarea_Obra</Alias> <!-- Simulando a coluna Subárea -->
+		</ExtendedAttribute>
+	</ExtendedAttributes>
+	<Tasks>
+		<Task>
+			<UID>1</UID>
+			<ID>1</ID>
+			<Name>Tarefa Raiz</Name>
+			<Type>1</Type>
+			<IsNull>0</IsNull>
+			<CreateDate>2024-01-01T08:00:00</CreateDate>
+			<WBS>1</WBS>
+			<Outlinenumber>1</Outlinenumber>
+			<OutlineLevel>1</OutlineLevel>
+			<Priority>500</Priority>
+			<Start>2024-01-01T08:00:00</Start>
+			<Finish>2024-02-01T17:00:00</Finish>
+			<Duration>PT160H0M0S</Duration>
+			<DurationFormat>21</DurationFormat>
+            <!-- Valores das Colunas Personalizadas para esta tarefa -->
+			<ExtendedAttribute>
+				<FieldID>188743731</FieldID>
+				<Value>Torre A</Value> <!-- Area -->
+			</ExtendedAttribute>
+            <ExtendedAttribute>
+				<FieldID>188743733</FieldID>
+				<Value>Térreo</Value> <!-- Subarea -->
+			</ExtendedAttribute>
+            <ExtendedAttribute>
+				<FieldID>188743732</FieldID>
+				<Value>Estrutura</Value> <!-- Disciplina -->
+			</ExtendedAttribute>
+		</Task>
+        <Task>
+			<UID>2</UID>
+			<ID>2</ID>
+			<Name>Concretagem</Name>
+			<Type>0</Type>
+			<IsNull>0</IsNull>
+			<WBS>1.1</WBS>
+			<Outlinenumber>1.1</Outlinenumber>
+			<OutlineLevel>2</OutlineLevel>
+			<Priority>500</Priority>
+			<Start>2024-01-02T08:00:00</Start>
+			<Finish>2024-01-05T17:00:00</Finish>
+            <PercentComplete>50</PercentComplete> <!-- 50% concluído -->
+			<ExtendedAttribute>
+				<FieldID>188743731</FieldID>
+				<Value>Torre A</Value>
+			</ExtendedAttribute>
+            <ExtendedAttribute>
+				<FieldID>188743733</FieldID>
+				<Value>Térreo</Value>
+			</ExtendedAttribute>
+            <ExtendedAttribute>
+				<FieldID>188743732</FieldID>
+				<Value>Estrutura</Value>
+			</ExtendedAttribute>
+		</Task>
+	</Tasks>
+</Project>

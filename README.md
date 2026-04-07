@@ -1,32 +1,58 @@
-# QA Portfolio: Generic Project Manager E2E Suite
+# 🏗️ QA Portfolio: Platform Project Management (E2E & API Suite)
 
-![E2E Tests](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml/badge.svg)
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmathgarcia1%2Fqa-portfolio&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)
+[![E2E Tests](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/mathgarcia1/qa-portfolio/actions/workflows/main.yml)
 
-Este projeto demonstra uma suíte de testes de ponta a ponta (E2E) para uma plataforma de gestão de projetos. O objetivo é validar fluxos críticos de negócio usando **Playwright**, **Python** e o padrão **Page Object Model (POM)**.
+[![Allure Report](https://img.badge.svg?label=Report&message=Allure&color=green)](https://mathgarcia1.github.io/qa-portfolio/)
+
+Este projeto demonstra uma arquitetura de testes híbrida de alta performance para uma plataforma de gestão de projetos. O foco principal é a **observabilidade**, **manutenibilidade** e o conceito de **Shift-Left Testing**.
+
+---
+
+## 🎯 Objetivos Estratégicos
+- **Cobertura Híbrida:** Validação de fluxos críticos via UI (E2E) e regras de negócio via API (Integração).
+- **Estratégia Shift-Left:** Detecção precoce de vulnerabilidades de segurança e falhas lógicas na camada de serviço.
+- **Dados Realistas:** Implementação da biblioteca `Faker` para geração de massa de dados dinâmica e resiliente.
+
+## 🛠️ Stack Tecnológica & Decisões
+- **[Playwright](https://playwright.dev/):** Escolhido pela velocidade de execução e auto-waiting nativo, reduzindo *flakiness*.
+- **[Pytest](https://docs.pytest.org/):** Framework robusto para orquestração de testes e uso de fixtures efêmeras.
+- **Page Object Model (POM):** Abstração de seletores e lógica de interação para facilitar a manutenção a longo prazo.
+- **[Allure Report](https://docs.qameta.io/allure/):** Dashboard de alta fidelidade com evidências visuais e histórico de execuções.
+- **FastAPI TestClient:** Validação de endpoints sem a sobrecarga de um navegador, seguindo a Pirâmide de Testes.
 
 ## 🚀 Fluxos Cobertos
-1. **Autenticação:** Validação de login com sucesso e tratamento de erros.
-2. **Gestão de Usuários:** Criação e listagem de novos usuários no painel administrativo.
-3. **Módulo de BI:** Fluxo de criação e visualização de relatórios externos integrados.
-4. **Importação de Cronogramas:** Simulação de upload de arquivos XML e mapeamento de colunas dinâmicas.
+1. **Autenticação Segura:** Validação de cookies JWT e tratamento de credenciais inválidas.
+2. **Gestão Administrativa:** CRUD de usuários e permissões de acesso (com análise de vulnerabilidades).
+3. **Módulo de BI:** Integração de relatórios externos e renderização dinâmica.
+4. **Importação de Cronogramas:** Fluxo de upload de arquivos XML com mapeamento dinâmico de colunas e tratamento de erros de input.
 
-## 🛠️ Decisões Técnicas
-- **Page Object Model (POM):** Encapsulamento de seletores e lógica de interação para facilitar a manutenção e legibilidade.
-- **Isolamento de Ambiente:** Uso de fixtures do Pytest para subir um servidor Uvicorn efêmero durante a execução dos testes.
-- **CI/CD Integrado:** Workflow do GitHub Actions configurado para rodar os testes automaticamente em cada push.
-- **Segurança de Dados:** Uso de variáveis de ambiente para credenciais de teste, evitando vazamento de segredos.
+## 📊 Observabilidade (Allure Report)
+Os resultados dos testes são publicados automaticamente no GitHub Pages após cada commit.
+> [Clique aqui para visualizar o último Relatório de Testes](https://mathgarcia1.github.io/qa-portfolio/)
 
 ## 📦 Como Executar
+
+### Pré-requisitos
+- Python 3.10+
+- Docker & Docker-Compose (opcional)
+
+### Localmente
+1. Instale as dependências: `pip install -r requirements.txt`
+2. Instale os drivers do Playwright: `playwright install chromium`
+3. Execute a suíte completa com relatório:
+   ```bash
+   pytest tests/ --alluredir=allure-results
+   ```
+4. Visualize o relatório localmente:
+   ```bash
+   allure serve allure-results
+   ```
 
 ### Via Docker
 ```bash
 docker-compose up --build
 ```
-
-### Localmente
-1. Instale as dependências: `pip install -r requirements.txt`
-2. Instale o Playwright: `playwright install chromium`
-3. Execute os testes: `pytest tests/`
 
 ---
 *Este é um projeto de demonstração técnica focado em qualidade de software.*

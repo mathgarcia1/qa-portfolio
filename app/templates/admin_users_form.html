@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Novo Usuario</h2>
+<h2>{% if user %}Editar{% else %}Novo{% endif %} Usuario</h2>
 <form action="/admin/usuarios" method="post">
-    <input name="username" placeholder="Username">
+    {% if user %}
+    <input type="hidden" name="user_id" value="{{ user.id }}">
+    {% endif %}
+    <input name="username" placeholder="Username" value="{{ user.username if user else '' }}">
     <input name="password" type="password" placeholder="Password">
-    <input name="telefone_whatsapp" placeholder="Telefone">
+    <input name="telefone_whatsapp" placeholder="Telefone" value="{{ user.telefone_whatsapp if user else '' }}">
+    
+    <h3>Relatórios BI</h3>
+    {% for report in bi_reports %}
+    <div>
+        <label>
+            <input type="checkbox" name="bi_reports" value="{{ report.title }}" 
+            {% if user and report.title in user.bi_reports %}checked{% endif %}>
+            {{ report.title }}
+        </label>
+    </div>
+    {% endfor %}
+    
     <button type="submit">Salvar</button>
 </form>
 {% endblock %}

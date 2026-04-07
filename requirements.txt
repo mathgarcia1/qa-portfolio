@@ -5,3 +5,6 @@ python-multipart
 pytest
 pytest-playwright
 playwright
+allure-pytest
+httpx
+Faker

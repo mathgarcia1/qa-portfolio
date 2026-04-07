@@ -2,4 +2,17 @@
 {% block content %}
 <h2>Dashboard</h2>
 <p>Bem-vindo ao Project Manager.</p>
+
+<form>
+    <select name="project_id">
+        <option value="">Selecione um projeto</option>
+        {% for project in projects %}
+        <option value="{{ project.id }}">{{ project.name }}</option>
+        {% endfor %}
+    </select>
+</form>
+
+<div id="stats">
+    <p>Total de itens: <span id="disp_total">1</span></p>
+</div>
 {% endblock %}

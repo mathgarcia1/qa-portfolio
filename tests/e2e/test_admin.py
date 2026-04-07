@@ -8,13 +8,13 @@ def test_full_admin_flow(page: Page, uvicorn_server, admin_credentials):
     login_page.navigate(f"{uvicorn_server}/login")
     login_page.login(admin_credentials["username"], admin_credentials["password"])
     
-    # 2. Redirect check
+    # 2. Navegar
     expect(page).to_have_url(f"{uvicorn_server}/")
     
-    # 3. Create User
+    # 3. Criar Usuário
     admin_users = AdminUsersPage(page)
     admin_users.navigate(f"{uvicorn_server}/admin/usuarios")
     admin_users.create_user("qa_tester", "secure_pass", "5511000000000")
     
-    # 4. Verify in List
+    # 4. Verificar na Lista
     expect(page.locator(admin_users.table_rows).filter(has_text="qa_tester")).to_be_visible()
